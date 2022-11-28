@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
       {
         amount: 10000,
         currency: "usd",
-        description: "Down payment for first access to Breakpoints",
+        description: "Down payment for first access to web-23",
         source: token,
       }
     );
@@ -24,7 +24,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 302,
       headers: {
-        "Location": "https://breakpoints.ai/thank-you-early-access",
+        "Location": "/thank-you",
         'Set-Cookie': myCookie
       },
       body: "Success",
@@ -36,6 +36,5 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       body: err,
     };
-
   }
 };
