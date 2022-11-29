@@ -7,7 +7,6 @@ exports.handler = async (event, context) => {
   const email = decodeURIComponent(event.body.split("email=")[1].split("&stripeToken=")[0]);
   const stripeToken = event.body.split("stripeToken=")[1];
   const myCookie = cookie.serialize('emailHash', email);
-  //console.log(stripeToken)
 
   try {
     const token = stripeToken;
